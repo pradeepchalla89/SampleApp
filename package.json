@@ -1,0 +1,16 @@
+{
+  "name": "node-example",
+  "version": "1.0.0",
+  "description": "sample application using node and angular",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "bower install && node server.js"
+  },
+  "keywords": [
+    "node",
+    "angular"
+  ],
+  "author": "chandra",
+  "license": "ISC"
+}

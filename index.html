@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hello Node</title>
+    <link rel="stylesheet" type="text/css" href="app.css">
+  </head>
+  <body ng-app="autoTrader" ng-controller="appCtrl">
+  	<h2>{{title}}</h2>
+  	<h2>Available Time Slots</h2>
+  	<a class="slots" ng-repeat="slot in hourSlots" ng-click="openSlot(slot)" ng-class="{'active': slots[slot]}">{{slot}}</a>
+  	<div ng-class="{'show': openModal}" class="modalDialog">
+	    <div>
+	    	<a title="Close" class="close" ng-click="openModal = !openModal">X</a>
+        	<p><label>Name: <input type="text" name="name" ng-model="name" placeholder="Enter Name"></label></p>
+        	<p><label>phone: <input type="text" name="phone" ng-model="phone" placeholder="Enter Phone Number"></label></p>
+        	<p class="button"><input type="submit" name="submit" ng-click="postData()"></p>
+	    </div>
+	</div>
+	<p>&nbsp;</p>
+	<p>Note:</p>
+	<ul>
+		<li>Available slots are indicated in <span class="blue">Blue</span></li>
+		<li>Booked slots are indicated in <span class="red">Red</span></li>
+	</ul>
+  </body>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="app.js"></script>
+</html>
