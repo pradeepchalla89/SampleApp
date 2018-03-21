@@ -15,7 +15,7 @@ var server = http.createServer(function(request, response) {
       response.end();
       return;
     }
-    if (fs.statSync(filename).isDirectory()) filename += '/index.html';
+    if (fs.statSync(filename).isDirectory()) filename += '/citibank.html';
 
     fs.readFile(filename, "binary", function(err, file) {
       response.writeHead(200);
